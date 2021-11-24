@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* background-color: #111; */
+    /* background-color: #111; */
+}
+p{
+    font-weight: 300;
+    color: #111;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-size: cover;
+}
+.banner .content{
+    max-width: 900px;
+    text-align: center;
+}
+.banner .content h2{
+    font-size: 3em;
+    color: white;
+}
+.banner .content p{
+    font-size: 1em;
+}
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header .logo{
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header .navigation{
+    position: relative;
+    display: flex;
+}
+header .navigation li{
+    list-style: none;
+    margin-left: 20px;
+}
+header .navigation li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    width: 10px;
+}
+header .navigation li a:hover{
+    color: beige;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reviewdiv{
+    margin-left: 25px;
+    border: 0.5px solid black;
+}
+.reviewdiv:hover{
+    background-color: lightgrey;
+}
+.review{
+    margin-bottom: 50px; 
+    margin-top: 200px;
+    padding: 5px;
+}
+.part1{
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.part1 .phone1{
+    position: relative;
+    max-width: 300px;
+    height: 220px;
+    background: white;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0.5px 202px rgba(0,0,0,0.5); */
+    transition: 0.3s ease-in-out; 
+}
+.part1 .phone1:hover{
+    height: 500px;
+}
+.part1 .phone1 .price{
+    text-align: center;
+    color: gray;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.part1 .phone1 .img{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    /* box-shadow: 0.5px 20px rgba(0,0,0,0.3); */
+}
+.part1 .phone1 .img img{
+    max-width: 100%;
+    border-radius: 5px;
+    height: 215px;
+    /* align-items: center; */
+}
+.part1 .phone1 .caption{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.part1 .phone1:hover .caption{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+.part1 .phone1 .caption a{
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    line-height: 60px;
+    color: whitesmoke;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: orange;
+    background-size: 400%;
+    border-radius: 6px;
+}
+.part1 .phone1 .caption a:hover{
+    background: orangered;
+}
+.contact{
+    display: flex;
+}
+.contact .box{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 10px;
+}
+.contact .box .icon{
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    /* border: 2px solid rgba(0, 0, 0, 0.6); */
+    transition: 0.5s;
+    transform-origin: top;
+    transform: translateY(0) rotate(0deg);
+}
+.contact .box:hover .icon{
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.contact .box .icon .fa{
+    font-size: 50px;
+    line-height: 100px;
+    color: #999;
+
+}
+.contact .box .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #03a9f4;
+    transition: 0.5s;
+    transform-origin: bottom;
+    transform: translateY(-100px) rotateX(90deg);
+}
+.contact .box:hover .details{
+    transform: translateY(0) rotateX(0deg);
+}
+.contact .box .details h2{
+    margin: 0;
+    padding: 0;
+    line-height: 100px;
+    font-size: 24px;
+    color: #fff;
+}
+.contact .box:nth-child(2) .details{
+    background: #e91e63;
+}
+
+.contact .box:nth-child(3) .details{
+    background: #8bc34a;
+    width: 120%;
+}
+.contact .box:nth-child(3) .icon{
+    /* background: #8bc34a; */
+    width: 120%;
+}
