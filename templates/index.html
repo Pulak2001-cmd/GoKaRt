@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoKaRt!</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style (4).css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/logo.png')}}" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <div class="image">
+                <a href="#" class="logo"><img src="{{url_for('static', filename='img/logo.png')}}" alt="" class="logo"></a>
+            </div>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/home#Category">Category</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just shopping<br>It's <span>GoKaRt!</span></h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia obcaecati unde, harum distinctio doloribus iste assumenda voluptas. Iure doloremque adipisci quod quam voluptates dicta suscipit.</p>
+                <a href="Gokart.html">Get Started
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="imgBox">
+                <img src="{{url_for('static', filename='img/img1.png')}}" alt="" class="star">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="{{url_for('static', filename='img/img1.png')}}"  onmouseover="imgSlider('{{url_for('static', filename='img/img1.png')}}'); changeCirclecolor(white)"></li>
+            <li><img src="{{url_for('static', filename='img/img2.png')}}" onmouseover="imgSlider('{{url_for('static', filename='img/img2.png')}}'); changeCirclecolor(cyan)"></li>
+            <li><img src="{{url_for('static', filename='img/img3.png')}}" onmouseover="imgSlider('{{url_for('static', filename='img/img3.png')}}'); changeCirclecolor(violet)"></li>
+        </ul>
+        <ul class="sci">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <script>
+        function imgSlider(anything){
+            document.querySelector('.star').src = anything;
+        }
+        function changeCirclecolor(color){
+            document.querySelector('.circle').background = color;
+        }
+    </script>
+</body>
+</html>
